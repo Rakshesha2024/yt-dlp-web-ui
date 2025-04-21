@@ -1,0 +1,37 @@
+# Simple configuration file for yt-dlp webui
+
+---
+# Host where server will listen at (default: "0.0.0.0")
+#host: 0.0.0.0
+
+# Port where server will listen at (default: 3033)
+port: 8000
+
+# Directory where downloaded files will be stored (default: ".")
+downloadPath: /home/ren/archive
+
+# [optional] Enable RPC authentication (requires username and password)
+require_auth: true
+username: guyray
+password: h87038602
+
+# [optional] The download queue size (default: logical cpu cores)
+queue_size: 4 # min. 2
+
+# [optional] Full path to the yt-dlp (default: "yt-dlp")
+#downloaderPath: /usr/local/bin/yt-dlp
+
+# [optional] Enable file based logging with rotation (default: false)
+#enable_file_logging: false
+
+# [optional] Directory where the log file will be stored (default: ".")
+#log_path: .
+
+# [optional] Directory where the session database file will be stored (default: ".")
+#session_file_path: .
+
+# [optional] Path where the sqlite database will be created/opened (default: "./local.db")
+#local_database_path
+
+# [optional] Path where a custom frontend will be loaded (instead of the embedded one)
+#frontend_path: ./web/solid-frontend
