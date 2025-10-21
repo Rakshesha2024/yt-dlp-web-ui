@@ -34,8 +34,8 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "invalid username or password", http.StatusBadRequest)
 		return
 	}
-
-	expiresAt := time.Now().Add(time.Hour * 24 * 30)
+ //修改JWT令牌过期时间为10年，避免需要频繁手动更新YT_DLP_API_TOKEN环境变量
+	expiresAt := time.Now().Add(time.Hour * 24 * 3650)
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"expiresAt": expiresAt,
